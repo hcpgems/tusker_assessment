@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Box:</strong>
+  <%= @box_content.box %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @box_content.content %>
+</p>
+
+<%= link_to 'Edit', edit_box_content_path(@box_content) %> |
+<%= link_to 'Back', box_contents_path %>

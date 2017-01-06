@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Box Contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Box</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @box_contents.each do |box_content| %>
+      <tr>
+        <td><%= box_content.box %></td>
+        <td><%= box_content.content %></td>
+        <td><%= link_to 'Show', box_content %></td>
+        <td><%= link_to 'Edit', edit_box_content_path(box_content) %></td>
+        <td><%= link_to 'Destroy', box_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Box Content', new_box_content_path %>

@@ -1,0 +1,27 @@
+<%= form_for(box_content) do |f| %>
+  <% if box_content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(box_content.errors.count, "error") %> prohibited this box_content from being saved:</h2>
+
+      <ul>
+      <% box_content.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :box_id %>
+    <%= f.text_field :box_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content_id %>
+    <%= f.text_field :content_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
